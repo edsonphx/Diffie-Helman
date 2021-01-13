@@ -37,8 +37,8 @@ namespace Diffie_Helman
                 return;
             }
 
-            var mySecretNumber = _random.Next();
-            var friendSecretNumber = _random.Next();
+            var mySecretNumber = _random.Next(0, 1000);
+            var friendSecretNumber = _random.Next(0, 1000);
 
             var x = BigInteger.Pow(i, mySecretNumber) % p; //number sended to my friend
             var y = BigInteger.Pow(i, friendSecretNumber) % p; //number received from my friend
